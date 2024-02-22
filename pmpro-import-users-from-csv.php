@@ -503,7 +503,7 @@ class PMPro_Import_Users_From_CSV {
 
 			// If the first line is empty, abort
 			// If another line is empty, just skip it
-			if ( empty( $line ) ) {
+			if ( empty( $line ) || empty( array_filter( $line ) ) ) {
 				if ( $first ) {
 					break;
 				} else {
